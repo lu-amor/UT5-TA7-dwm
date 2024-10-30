@@ -25,6 +25,7 @@ export default function App() {
     Keyboard.dismiss();
     if (search && search.trim() !== '') {
       fetchMovie(search);
+      setSearch("");
     } else {
       alert('The movie title cannot be empty');
     }
@@ -62,6 +63,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: '#fff0f3',
   },
   contentContainer: {
